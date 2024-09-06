@@ -165,19 +165,19 @@ import LovdWhite from '../assets/LovdWhite_Logo.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-600 text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-14 gap-8 items-center">
+    <footer className="bg-main-blue text-white py-8">
+      <div className="container font-poppins mx-auto grid grid-cols-1 md:grid-cols-14 gap-8 items-center">
         {/* Company Links */}
         <div className="col-span-14 md:col-start-2 md:col-span-2 space-y-4 text-center md:text-left">
           <h3 className="text-xl font-bold">Company</h3>
           <ul className="space-y-2">
             <li>
-              <a href="#about" className="hover:text-blue-400">
+              <a href="#about" className="hover:text-blue-400 font-medium ">
                 About us
               </a>
             </li>
             <li>
-              <a href="#docs" className="hover:text-blue-400">
+              <a href="#docs" className="hover:text-blue-400 font-medium">
                 Docs
               </a>
             </li>
@@ -195,7 +195,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"
               >
-                <img src={twitter_logo} alt="Twitter" className="w-8 h-8" />
+                <img src={twitter_logo} alt="Twitter" className="w-6 h-7" />
               </a>
             </li>
             <li>
@@ -231,7 +231,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="col-span-14 md:col-start-11 md:col-span-3 text-center md:text-right ">
+        <div className="font-regular col-span-14 md:col-start-11 md:col-span-3 text-center md:text-right ">
           <p>&copy; L0vd Inc. All rights reserved</p>
         </div>
       </div>

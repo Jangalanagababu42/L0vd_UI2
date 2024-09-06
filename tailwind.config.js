@@ -28,7 +28,13 @@ module.exports = {
         l: '0 4px 4px 0 rgba(0,0,0,0)',
       },
       colors: {
-        'light-blue': '#dae4f9',
+        'light-blue': '#DAE4F9',
+        'light-blue-stroke': '#80AFF9',
+        'main-blue': '#1461DB',
+        'gradi-blue': '#4E8CE2',
+      },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
