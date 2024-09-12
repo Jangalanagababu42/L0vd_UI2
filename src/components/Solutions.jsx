@@ -120,19 +120,28 @@ import restaking from '../assets/restaking.svg';
 import testnet from '../assets/testnet.svg';
 import guides from '../assets/guides.svg';
 import staking from '../assets/staking.svg';
+// import solutionsbg from '../assets/solutions-bg.svg';
 
 const Solutions = () => {
   return (
-    <section className=" font-poppins py-16 ">
+    <section
+      className=" font-poppins py-16 "
+      // style={{
+      //   backgroundImage: `url(${solutionsbg})`,
+      //   // backgroundPosition: 'right bottom',
+      //   backgroundRepeat: 'no-repeat',
+      //   // backgroundSize: '40% 70%',
+      // }}
+    >
       <div className="container mx-auto">
-        <h2 className="font-black text-lg md:text-2xl  py-5 text-center">
+        <h2 className="col-span-1 md:col-start-2 md:col-span-12 text-2xl md:text-3xl font-black mb-8 text-center">
           WE CREATE CUSTOM SOLUTIONS
         </h2>
 
         {/* Grid for all solutions */}
-        <div className="grid grid-cols-1 px-4 lg:grid-cols-14 gap-6">
+        <div className="grid grid-cols-1 p-4 lg:grid-cols-14 gap-6">
           {/* Infrastructure */}
-          <div className="bg-white p-8 rounded-2xl shadow-lg w-full lg:col-start-2 lg:col-span-3">
+          <div className="bg-white p-8 rounded-2xl  ring-1 ring-light-blue-stroke ring-inset w-full lg:col-start-2 lg:col-span-3">
             <h3 className="text-xl font-semibold mb-4">Infrastructure</h3>
             <p className="font-regular">
               Get access to our private high-performance RPCs and archive APIs.
@@ -141,12 +150,12 @@ const Solutions = () => {
 
           {/* Staking */}
           <div
-            className="bg-main-blue text-white p-8 rounded-lg shadow-lg w-full lg:col-start-5 lg:col-span-5 flex flex-col "
+            className="bg-blue-gradient  text-white p-8 rounded-lg shadow-lg w-full lg:col-start-5 lg:col-span-5 flex flex-col "
             style={{
               backgroundImage: `url(${staking})`,
-              backgroundPosition: 'right bottom',
+              backgroundPosition: 'right bottom 20px',
               backgroundRepeat: 'no-repeat',
-              backgroundSize: '40% 70%',
+              backgroundSize: '50% 70%',
             }}
           >
             <h3 className="text-xl font-semibold mb-4">Staking</h3>
@@ -158,10 +167,10 @@ const Solutions = () => {
 
           {/* Guides */}
           <div
-            className="bg-white p-8 rounded-lg shadow-lg w-full lg:col-start-10 lg:col-span-4 flex flex-col "
+            className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset w-full lg:col-start-10 lg:col-span-4 flex flex-col "
             style={{
               backgroundImage: `url(${guides})`,
-              backgroundPosition: 'center bottom',
+              backgroundPosition: 'center bottom 10px',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '30%',
             }}
@@ -193,15 +202,7 @@ const Solutions = () => {
           {/* Development and Restaking (stacked vertically) */}
           <div className="flex flex-col gap-6 w-full lg:col-start-5 lg:col-span-4">
             {/* Development */}
-            <div
-              className="bg-main-blue text-white p-8 rounded-lg shadow-lg flex-1 flex flex-col  w-full"
-              style={{
-                backgroundImage: 'url("/path/to/development-bg.png")',
-                backgroundPosition: 'right bottom',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain',
-              }}
-            >
+            <div className="bg-main-blue text-white p-8 rounded-lg shadow-lg flex-1 flex flex-col  w-full">
               <h3 className="text-xl font-semibold mb-4">Development</h3>
               <p className="font-regular">
                 We develop bots, dashboards, and monitoring for your needs.
@@ -210,12 +211,12 @@ const Solutions = () => {
 
             {/* Restaking */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg flex-1 flex flex-col  w-full"
+              className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset flex-1 flex flex-col  w-full"
               style={{
                 backgroundImage: `url(${restaking})`,
-                backgroundPosition: 'right bottom',
+                backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
-                backgroundSize: '20% 50%',
+                backgroundSize: '80% 80%',
               }}
             >
               <h3 className="text-xl font-semibold mb-4">Restaking</h3>
@@ -230,7 +231,7 @@ const Solutions = () => {
             className="bg-light-blue p-8 rounded-lg shadow-lg w-full lg:col-start-9 lg:col-span-5 flex flex-col "
             style={{
               backgroundImage: `url(${testnet})`,
-              backgroundPosition: 'center bottom',
+              backgroundPosition: 'center bottom 20px',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '80% 50%',
             }}

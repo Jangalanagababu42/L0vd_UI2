@@ -32,6 +32,7 @@ module.exports = {
         'light-blue-stroke': '#80AFF9',
         'main-blue': '#1461DB',
         'gradi-blue': '#4E8CE2',
+        'blue-gradient': '#508CEB',
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

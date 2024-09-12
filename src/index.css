@@ -119,7 +119,7 @@ body {
 
 /* Responsive Container */
 .container {
-  @apply mx-auto;
+  /* @apply mx-auto; */
   max-width: 100%; /* Ensure full width by default */
 }
 
@@ -197,4 +197,68 @@ h4,
 h5,
 h6 {
   @apply font-bold;
+}
+/* Checkmark animation */
+/* Checkmark animation */
+/* Checkmark animation */
+/* Checkmark animation */
+.checkmark-animation {
+  background-color: #000000; /* Green background for success */
+  pointer-events: none; /* Disable clicking during animation */
+}
+
+.revert-animation {
+  background-color: #000; /* Original background color */
+  transition: background-color 2s ease-in-out;
+}
+
+.checkmark {
+  font-size: 1rem; /* Adjust size of the checkmark */
+  font-weight: bold;
+}
+
+/* Typing animation for the text */
+.typing-text {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden; /* Ensures the text stays within the container */
+  white-space: nowrap;
+  border-right: 2px solid; /* Blinking cursor */
+  width: 0; /* Start with hidden text */
+  animation: typing 2s steps(20) forwards, blink 0.75s step-end infinite;
+}
+
+.reverse-typing-text {
+  animation: reverseTyping 2s steps(20) forwards, blink 0.75s step-end infinite;
+}
+
+/* Animation for the typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px; /* Adjust to match the length of the text */
+  }
+}
+
+/* Reverse typing effect */
+@keyframes reverseTyping {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }

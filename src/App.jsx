@@ -7,6 +7,7 @@ import NetworksCarousel from './components/NetworksCarousel';
 import Solutions from './components/Solutions';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import solutionsbg from './assets/solutions-bg.svg';
 
 function App() {
   return (
@@ -15,8 +16,16 @@ function App() {
       <HeroSection />
       {/* <StatsSection /> */}
       <NetworksCarousel />
-      <Solutions />
-      <ContactForm />
+      <div
+        className="w-full bg-no-repeat "
+        style={{
+          backgroundImage: `url(${solutionsbg})`,
+          backgroundSize: 'cover',
+        }}
+      >
+        <Solutions />
+        <ContactForm />
+      </div>
       <Footer /> {/* Add Footer here */}
     </div>
   );

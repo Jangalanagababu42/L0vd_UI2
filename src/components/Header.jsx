@@ -7,7 +7,7 @@ const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="font-poppins font-medium sticky top-0 bg-white z-50 mb-5">
+    <header className="font-poppins  sticky top-0 bg-white z-50 mb-5">
       {/* Notification Bar */}
       {isNotificationVisible && (
         <div className="relative w-full">
@@ -44,35 +44,35 @@ const Header = () => {
           <img
             src={Logo}
             alt="Logo"
-            className="h-20 w-auto sm:h-24 md:h-14 lg:h-14 xl:h-16 2xl:h-20"
+            className="h-12 w-auto sm:h-24 md:h-14 lg:h-12 xl:h-12 2xl:h-14"
           />
         </div>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex col-start-8 col-span-6 items-center justify-between">
+        <div className="hidden  lg:flex col-start-8 col-span-6 items-center justify-between">
           <a
             href="#about"
-            className="hover:text-blue-600 text-base lg:text-xl xl:text-2xl"
+            className="hover:text-blue-600 lg:text-sm  xl:text-base"
           >
             About us
           </a>
           <a
             href="#networks"
-            className="hover:text-blue-600 text-base lg:text-xl xl:text-2xl"
+            className="hover:text-blue-600 lg:text-sm  xl:text-base"
           >
             Networks
           </a>
           <a
             href="#products"
-            className="hover:text-blue-600 text-base lg:text-xl xl:text-2xl text-center"
+            className="hover:text-blue-600 lg:text-sm  xl:text-base text-center"
           >
             Products
           </a>
-          <button
-            href="#contact"
-            className="bg-main-blue text-white text-xl px-6 py-2 rounded-lg lg:px-8 xl:px-10 lg:py-3 xl:py-4 lg:text-xl xl:text-2xl"
-          >
-            Contact us
+
+          <button className="bg-main-blue px-5 py-2.5  lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
+            <div className=" text-xl text-white mx-5 font-bold ">
+              Contact us
+            </div>
           </button>
         </div>
 
