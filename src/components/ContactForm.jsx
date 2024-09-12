@@ -131,30 +131,30 @@
 // };
 
 // export default ContactForm;
-import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import arrow from '../assets/arrow.svg';
-import telegram_logo from '../assets/telegram_logo.svg';
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import arrow from "../assets/arrow.svg";
+import telegram_logo from "../assets/telegram_logo.svg";
 
 const ContactForm = () => {
-  const [usermail, setUsermail] = useState('');
-  const [usermessage, setUsermessage] = useState('');
+  const [usermail, setUsermail] = useState("");
+  const [usermessage, setUsermessage] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false); // Track form submission state
   const [isReverting, setIsReverting] = useState(false); // Track if animation is reverting
   const [showContactUs, setShowContactUs] = useState(true); // Control when to show "Contact Us" button
   const formRef = useRef();
-  const serviceID = 'service_7tv6i8d';
-  const templateID = 'template_kxo9zzp';
-  const publicKey = 'xRZftC_mTl-WLZwVa';
+  const serviceID = "service_7tv6i8d";
+  const templateID = "template_kxo9zzp";
+  const publicKey = "xRZftC_mTl-WLZwVa";
 
   const HandleForm = (e) => {
     e.preventDefault();
     setShowContactUs(false); // Hide "Contact Us" button when submitting
     emailjs.sendForm(serviceID, templateID, formRef.current, publicKey).then(
       () => {
-        console.log('SUCCESS!');
-        setUsermail('');
-        setUsermessage('');
+        console.log("SUCCESS!");
+        setUsermail("");
+        setUsermessage("");
         setIsSubmitted(true); // Start the forward typing animation
         setTimeout(() => {
           setIsReverting(true); // Start the reverse animation
@@ -166,7 +166,7 @@ const ContactForm = () => {
         }, 4000); // Keep the message for 4 seconds before reversing
       },
       (error) => {
-        console.log('FAILED...', error);
+        console.log("FAILED...", error);
       }
     );
   };
@@ -176,7 +176,7 @@ const ContactForm = () => {
       <div className="container font-poppins mx-auto px-4 grid grid-cols-1 md:grid-cols-14 gap-4">
         {/* Section Title */}
         <h2 className="col-span-1 md:col-start-2 md:col-span-12 text-2xl md:text-3xl font-black mb-8 text-center">
-          CONTACT US AND GET YOUR{' '}
+          CONTACT US AND GET YOUR{" "}
           <span className="text-blue-600">PERSONALIZED OFFER</span>
         </h2>
 
@@ -236,16 +236,16 @@ const ContactForm = () => {
                   {/* Conditional button rendering */}
                   <button
                     type="submit"
-                    className={`bg-black text-white px-6 py-3 rounded-lg transition-all duration-200 w-full flex justify-center items-center ${
-                      isSubmitted ? 'checkmark-animation' : ''
-                    } ${isReverting ? 'revert-animation' : ''}`}
+                    className={`bg-black hover:bg-black-gradient text-white px-6 py-3 rounded-lg transition-all duration-200 w-full flex justify-center items-center ${
+                      isSubmitted ? "checkmark-animation" : ""
+                    } ${isReverting ? "revert-animation" : ""}`}
                     disabled={isSubmitted || !showContactUs} // Disable the button when submitting or after submission
                   >
                     {/* Conditional rendering for the button text */}
                     {isSubmitted && !isReverting ? (
                       <span className="checkmark">✔</span>
                     ) : showContactUs ? (
-                      'Contact us'
+                      "Contact us"
                     ) : (
                       <span className="checkmark">✔</span>
                     )}
@@ -255,7 +255,7 @@ const ContactForm = () => {
                   {isSubmitted && (
                     <span
                       className={`typing-text ${
-                        isReverting ? 'reverse-typing-text' : ''
+                        isReverting ? "reverse-typing-text" : ""
                       }`}
                     >
                       Request received
@@ -266,7 +266,7 @@ const ContactForm = () => {
                   href="https://t.me/your_telegram"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-main-blue text-white px-6 py-3 rounded-lg flex justify-center items-center w-full"
+                  className="bg-main-blue hover:bg-blue-gradient text-white px-6 py-3 rounded-lg flex justify-center items-center w-full"
                 >
                   Telegram
                   <img

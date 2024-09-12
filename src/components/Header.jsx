@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import Logo from '../assets/logo.svg';
-import closeIcon from '../assets/Close icon.svg';
+import { useState } from "react";
+import Logo from "../assets/logo.svg";
+import closeIcon from "../assets/Close icon.svg";
 
 const Header = () => {
   const [isNotificationVisible, setNotificationVisible] = useState(true);
@@ -18,7 +18,7 @@ const Header = () => {
             </p>
 
             {/* Try Our API Button */}
-            <button className="col-start-11 col-span-3 bg-main-blue text-white px-4 py-2 sm:px-6 md:px-8 rounded-lg text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+            <button className="col-start-11 col-span-3 bg-main-blue hover:bg-blue-gradient text-white px-4 py-2 sm:px-6 md:px-8 rounded-lg text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
               Try our API!
             </button>
 
@@ -69,7 +69,7 @@ const Header = () => {
             Products
           </a>
 
-          <button className="bg-main-blue px-5 py-2.5  lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
+          <button className="bg-main-blue hover:bg-blue-gradient px-5 py-2.5  lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
             <div className=" text-xl text-white mx-5 font-bold ">
               Contact us
             </div>
@@ -99,11 +99,11 @@ const Header = () => {
           {/* Popup Menu */}
           <div
             className={`fixed left-0 right-0 bg-white z-50 shadow-lg flex flex-col items-center space-y-4 py-8 lg:hidden ${
-              isNotificationVisible ? 'top-20 sm:top-16 md:top-20' : 'top-0'
+              isNotificationVisible ? "top-20 sm:top-16 md:top-20" : "top-0"
             }`}
             style={{
-              maxHeight: 'calc(100vh - 5rem)', // Adjusts max height based on notification
-              overflowY: 'auto', // Adds scrolling if content overflows
+              maxHeight: "calc(100vh - 5rem)", // Adjusts max height based on notification
+              overflowY: "auto", // Adds scrolling if content overflows
             }}
           >
             <button
@@ -123,7 +123,7 @@ const Header = () => {
             </a>
             <a
               href="#contact"
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg"
+              className="bg-blue-600 hover:bg-blue-gradient text-white px-6 py-2 rounded-lg"
             >
               Contact us
             </a>

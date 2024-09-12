@@ -1,4 +1,4 @@
-import cubes from '../assets/cubes.svg';
+import cubes from "../assets/cubes.svg";
 
 const HeroSection = () => {
   return (
@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           {/* Contact Us Button */}
           <div className="mt-6">
-            <button className="bg-main-blue px-5 py-2.5 lg:mt-8 lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
+            <button className="bg-main-blue hover:bg-blue-gradient px-5 py-2.5 lg:mt-8 lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
               <div className=" text-xl text-white mx-5 font-bold ">
                 Contact us
               </div>
