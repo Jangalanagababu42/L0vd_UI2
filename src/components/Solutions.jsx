@@ -116,10 +116,10 @@
 // };
 
 // export default Solutions;
-import restaking from '../assets/restaking.svg';
-import testnet from '../assets/testnet.svg';
-import guides from '../assets/guides.svg';
-import staking from '../assets/staking.svg';
+import restaking from "../assets/restaking.svg";
+import testnet from "../assets/testnet.svg";
+import guides from "../assets/guides.svg";
+import staking from "../assets/staking.svg";
 // import solutionsbg from '../assets/solutions-bg.svg';
 
 const Solutions = () => {
@@ -153,9 +153,9 @@ const Solutions = () => {
             className="bg-blue-gradient  text-white p-8 rounded-lg shadow-lg w-full lg:col-start-5 lg:col-span-5 flex flex-col "
             style={{
               backgroundImage: `url(${staking})`,
-              backgroundPosition: 'right bottom 20px',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '50% 70%',
+              backgroundPosition: "right bottom 20px",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "50% 70%",
             }}
           >
             <h3 className="text-xl font-semibold mb-4">Staking</h3>
@@ -170,9 +170,9 @@ const Solutions = () => {
             className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset w-full lg:col-start-10 lg:col-span-4 flex flex-col "
             style={{
               backgroundImage: `url(${guides})`,
-              backgroundPosition: 'center bottom 10px',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '30%',
+              backgroundPosition: "center bottom 10px",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "30%",
             }}
           >
             <h3 className="text-xl font-semibold mb-4">Guides</h3>
@@ -182,18 +182,10 @@ const Solutions = () => {
           </div>
 
           {/* Snapshots */}
-          <div
-            className="bg-light-blue-stroke text-white p-8 rounded-lg shadow-lg w-full lg:col-start-2 lg:col-span-3 flex flex-col "
-            style={{
-              backgroundImage: 'url("/path/to/snapshots-bg.png")',
-              backgroundPosition: 'right bottom',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: 'contain',
-            }}
-          >
+          <div className="bg-light-blue-stroke text-white p-8 rounded-lg shadow-lg w-full lg:col-start-2 lg:col-span-3 flex flex-col ">
             <h3 className="text-xl font-semibold mb-4">Snapshots</h3>
             <p className="font-regular">
-              You want to spin up the node but don't want to wait a lot of time.
+              You want to spin up the node but dont want to wait a lot of time.
               Feel free to contact us and we will provide you a snapshot of a
               desired network, so you can sync the node in a few moments.
             </p>
@@ -214,9 +206,9 @@ const Solutions = () => {
               className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset flex-1 flex flex-col  w-full"
               style={{
                 backgroundImage: `url(${restaking})`,
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: '80% 80%',
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "80% 80%",
               }}
             >
               <h3 className="text-xl font-semibold mb-4">Restaking</h3>
@@ -231,9 +223,9 @@ const Solutions = () => {
             className="bg-light-blue p-8 rounded-lg shadow-lg w-full lg:col-start-9 lg:col-span-5 flex flex-col "
             style={{
               backgroundImage: `url(${testnet})`,
-              backgroundPosition: 'center bottom 20px',
-              backgroundRepeat: 'no-repeat',
-              backgroundSize: '80% 50%',
+              backgroundPosition: "center bottom 20px",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "80% 50%",
             }}
           >
             <h3 className="text-xl font-semibold mb-4">Testnets</h3>
