@@ -5,7 +5,7 @@ import NetworksCarousel from "./components/NetworksCarousel";
 import Solutions from "./components/Solutions";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
-import solutionsbg from "./assets/vector.png";
+import solutionsbg from "/assets/Vector.png";
 
 function App() {
   return (
