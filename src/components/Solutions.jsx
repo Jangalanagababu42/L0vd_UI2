@@ -149,15 +149,7 @@ const Solutions = () => {
           </div>
 
           {/* Staking */}
-          <div
-            className="bg-blue-gradient  text-white p-8 rounded-lg shadow-lg w-full lg:col-start-5 lg:col-span-5 flex flex-col "
-            style={{
-              backgroundImage: `url(${staking})`,
-              backgroundPosition: "right bottom 20px",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "50% 70%",
-            }}
-          >
+          <div className="bg-blue-gradient  text-white p-8 rounded-lg shadow-lg w-full lg:col-start-5 lg:col-span-5 flex flex-col ">
             <h3 className="text-xl font-semibold mb-4">Staking</h3>
             <p className="font-regular">
               Stake with us and enjoy the most reliable rewards and
@@ -166,15 +158,7 @@ const Solutions = () => {
           </div>
 
           {/* Guides */}
-          <div
-            className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset w-full lg:col-start-10 lg:col-span-4 flex flex-col "
-            style={{
-              backgroundImage: `url(${guides})`,
-              backgroundPosition: "center bottom 10px",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "30%",
-            }}
-          >
+          <div className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset w-full lg:col-start-10 lg:col-span-4 flex flex-col ">
             <h3 className="text-xl font-semibold mb-4">Guides</h3>
             <p className="font-regular">
               We make crypto easy for the community.
@@ -202,15 +186,7 @@ const Solutions = () => {
             </div>
 
             {/* Restaking */}
-            <div
-              className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset flex-1 flex flex-col  w-full"
-              style={{
-                backgroundImage: `url(${restaking})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "80% 80%",
-              }}
-            >
+            <div className="bg-white p-8 rounded-lg  ring-1 ring-light-blue-stroke ring-inset flex-1 flex flex-col  w-full">
               <h3 className="text-xl font-semibold mb-4">Restaking</h3>
               <p className="font-regular">
                 Want to multiply your rewards? Ask us how!
@@ -219,15 +195,7 @@ const Solutions = () => {
           </div>
 
           {/* Testnets */}
-          <div
-            className="bg-light-blue p-8 rounded-lg shadow-lg w-full lg:col-start-9 lg:col-span-5 flex flex-col "
-            style={{
-              backgroundImage: `url(${testnet})`,
-              backgroundPosition: "center bottom 20px",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "80% 50%",
-            }}
-          >
+          <div className="bg-light-blue p-8 rounded-lg shadow-lg w-full lg:col-start-9 lg:col-span-5 flex flex-col ">
             <h3 className="text-xl font-semibold mb-4">Testnets</h3>
             <p className="font-regular">
               Do you have an ongoing testnet? We would love to bring our
