@@ -116,10 +116,10 @@
 // };
 
 // export default Solutions;
-import restaking from "../assets/restaking.svg";
-import testnet from "../assets/testnet.svg";
-import guides from "../assets/guides.svg";
-import staking from "../assets/staking.svg";
+import restaking from "/assets/restaking.svg";
+import testnet from "/assets/testnet.svg";
+import guides from "/assets/guides.svg";
+import staking from "/assets/staking.svg";
 // import solutionsbg from '../assets/solutions-bg.svg';
 
 const Solutions = () => {
