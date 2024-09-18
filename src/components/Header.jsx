@@ -1,10 +1,18 @@
-import { useState } from "react";
-import Logo from "../assets/logo.svg";
-import closeIcon from "../assets/Close icon.svg";
+import { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
+
+import Logo from '../assets/logo.svg';
+import closeIcon from '../assets/Close icon.svg';
 
 const Header = () => {
   const [isNotificationVisible, setNotificationVisible] = useState(true);
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const scrollWithOffset = (el) => {
+    const yOffset = -80; // Change this value to match your navbar height
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
 
   return (
     <header className="font-poppins  sticky top-0 bg-white z-50 mb-5">
@@ -25,12 +33,12 @@ const Header = () => {
             {/* Close Button */}
             <button
               onClick={() => setNotificationVisible(false)}
-              className="absolute right-0 top-1 transform -translate-x-2"
+              className="absolute right-2 top-4 transform -translate-x-2"
             >
               <img
                 src={closeIcon}
                 alt="Close"
-                className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
+                className="w-4 h-4 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-8 lg:h-8"
               />
             </button>
           </div>
@@ -50,30 +58,38 @@ const Header = () => {
 
         {/* Desktop Links */}
         <div className="hidden  lg:flex col-start-8 col-span-6 items-center justify-between">
-          <a
-            href="#about"
+          <HashLink
+            smooth
+            to="#aboutus"
             className="hover:text-blue-600 lg:text-sm  xl:text-base"
+            scroll={scrollWithOffset}
           >
             About us
-          </a>
-          <a
-            href="#networks"
+          </HashLink>
+          <HashLink
+            smooth
+            to="#networks"
             className="hover:text-blue-600 lg:text-sm  xl:text-base"
+            scroll={scrollWithOffset}
           >
             Networks
-          </a>
-          <a
-            href="#products"
+          </HashLink>
+          <HashLink
+            smooth
+            to="#products"
             className="hover:text-blue-600 lg:text-sm  xl:text-base text-center"
+            scroll={scrollWithOffset}
           >
             Products
-          </a>
+          </HashLink>
 
-          <button className="bg-main-blue hover:bg-blue-gradient px-5 py-2.5  lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
-            <div className=" text-xl text-white mx-5 font-bold ">
-              Contact us
-            </div>
-          </button>
+          <HashLink smooth to="#contactus" scroll={scrollWithOffset}>
+            <button className="bg-main-blue hover:bg-blue-gradient px-5 py-2.5  lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
+              <div className=" text-xl text-white mx-5 font-bold ">
+                Contact us
+              </div>
+            </button>
+          </HashLink>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -99,11 +115,11 @@ const Header = () => {
           {/* Popup Menu */}
           <div
             className={`fixed left-0 right-0 bg-white z-50 shadow-lg flex flex-col items-center space-y-4 py-8 lg:hidden ${
-              isNotificationVisible ? "top-20 sm:top-16 md:top-20" : "top-0"
+              isNotificationVisible ? 'top-20 sm:top-16 md:top-20' : 'top-0'
             }`}
             style={{
-              maxHeight: "calc(100vh - 5rem)", // Adjusts max height based on notification
-              overflowY: "auto", // Adds scrolling if content overflows
+              maxHeight: 'calc(100vh - 5rem)', // Adjusts max height based on notification
+              overflowY: 'auto', // Adds scrolling if content overflows
             }}
           >
             <button
@@ -112,21 +128,42 @@ const Header = () => {
             >
               &times;
             </button>
-            <a href="#about" className="hover:text-blue-600 text-lg">
+            <HashLink
+              smooth
+              to="#aboutus"
+              className="hover:text-blue-600 text-lg"
+              scroll={scrollWithOffset}
+              onClick={() => setMenuOpen(false)}
+            >
               About us
-            </a>
-            <a href="#networks" className="hover:text-blue-600 text-lg">
+            </HashLink>
+            <HashLink
+              smooth
+              to="#networks"
+              className="hover:text-blue-600 text-lg"
+              scroll={scrollWithOffset}
+              onClick={() => setMenuOpen(false)}
+            >
               Networks
-            </a>
-            <a href="#products" className="hover:text-blue-600 text-lg">
+            </HashLink>
+            <HashLink
+              smooth
+              to="#products"
+              className="hover:text-blue-600 text-lg"
+              scroll={scrollWithOffset}
+              onClick={() => setMenuOpen(false)}
+            >
               Products
-            </a>
-            <a
-              href="#contact"
+            </HashLink>
+            <HashLink
+              smooth
+              to="#contactus"
               className="bg-blue-600 hover:bg-blue-gradient text-white px-6 py-2 rounded-lg"
+              scroll={scrollWithOffset}
+              onClick={() => setMenuOpen(false)}
             >
               Contact us
-            </a>
+            </HashLink>
           </div>
         </>
       )}

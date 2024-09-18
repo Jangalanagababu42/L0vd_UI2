@@ -1,12 +1,18 @@
-import cubes from "../assets/cubes.svg";
+import cubes from '../assets/cubes.svg';
+import { HashLink } from 'react-router-hash-link';
 
 const HeroSection = () => {
+  const scrollWithOffset = (el) => {
+    const yOffset = -80; // Change this value to match your navbar height
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
   return (
-    <section className=" font-poppins bg-white text-center py-12 ">
+    <section className=" font-poppins bg-white text-center py-0 md:py-12 ">
       {/* Hero Content */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-14 gap-[1.25rem] mb-40">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-14 gap-[1.25rem] mb-40 mt-10 md:mt-28 ">
         {/* Hero Text Section */}
-        <div className="col-span-full md:col-start-2 md:col-span-7 text-center md:text-left px-4 md:px-0">
+        <div className="col-span-full md:col-start-2 md:col-span-7 text-center md:text-left px-4 md:px-0 ">
           <h1 className="font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold leading-tight">
             YOUR TRUSTED
           </h1>
@@ -26,11 +32,13 @@ const HeroSection = () => {
 
           {/* Contact Us Button */}
           <div className="mt-6">
-            <button className="bg-main-blue hover:bg-blue-gradient px-5 py-2.5 lg:mt-8 lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
-              <div className=" text-xl text-white mx-5 font-bold ">
-                Contact us
-              </div>
-            </button>
+            <HashLink smooth to="#contactus" scroll={scrollWithOffset}>
+              <button className="bg-main-blue hover:bg-blue-gradient px-5 py-2.5 lg:mt-8 lg:px-12 lg:py-2.5 2xl:px-10 2xl:py-5 rounded-xl">
+                <div className=" text-xl text-white mx-5 font-bold ">
+                  Contact us
+                </div>
+              </button>
+            </HashLink>
           </div>
         </div>
 
@@ -46,7 +54,10 @@ const HeroSection = () => {
       </div>
 
       {/* Total Staked Assets */}
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-14 gap-[1.25rem] mt-12 px-4 md:px-0">
+      <div
+        className="container mx-auto grid grid-cols-1 md:grid-cols-14 gap-[1.25rem] mt-12 px-4 md:px-0"
+        id="aboutus"
+      >
         <div className="font-poppins col-span-full gap-y-4	 md:col-start-2 md:col-span-12 bg-light-blue-stroke  text-white py-6 lg:py-8 xl:py-10 rounded-2xl text-center">
           <h2 className="font-semibold text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl ">
             Total Staked Assets

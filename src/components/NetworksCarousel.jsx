@@ -124,8 +124,11 @@ const networks = [
 
 const NetworksCarousel = () => {
   return (
-    <div className="font-poppins w-full overflow-hidden bg-white py-8">
-      <h2 className="col-span-1 md:col-start-2 md:col-span-12 text-2xl md:text-3xl font-black mb-8 text-center">
+    <div
+      className=" font-poppins w-full overflow-hidden bg-white py-8"
+      id="networks"
+    >
+      <h2 className=" col-span-1 px-5 md:col-start-2 md:col-span-12  text-2xl md:text-3xl font-black mb-8 text-center ">
         ALL NETWORKS YOU NEED. IN ONE PLACE
       </h2>
       <Marquee velocity={15} scatterRandomly={false} resetAfterTries={200}>
