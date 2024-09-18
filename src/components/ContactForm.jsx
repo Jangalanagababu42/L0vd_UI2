@@ -133,8 +133,8 @@
 // export default ContactForm;
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import arrow from "/assets/arrow.svg";
-import telegram_logo from "/assets/telegram_logo.svg";
+import arrow from "../assets/arrow.svg";
+import telegram_logo from "../assets/telegram_logo.svg";
 
 const ContactForm = () => {
   const [usermail, setUsermail] = useState("");
